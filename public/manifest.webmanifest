@@ -1,0 +1,12 @@
+{
+  "name": "Stay Awake / 短时唤醒工具",
+  "short_name": "Stay Awake",
+  "lang": "zh-CN",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b1020",
+  "theme_color": "#0b1020",
+  "icons": [
+    { "src": "/icons/awake.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

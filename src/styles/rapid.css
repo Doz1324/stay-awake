@@ -1,0 +1,140 @@
+.round-progress {
+  height: 3px;
+  background: var(--line);
+  margin: 18px auto;
+  max-width: 330px;
+}
+.round-progress > div {
+  background: var(--accent);
+  height: 100%;
+}
+.rapid-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: min(100%, 330px);
+  margin: 0 auto;
+}
+.rapid-grid button {
+  position: relative;
+  aspect-ratio: 1;
+  min-height: 70px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+  display: grid;
+  place-items: center;
+}
+.rapid-grid .target {
+  background: var(--raised);
+  border: 2px solid var(--accent);
+}
+.cell-key {
+  position: absolute;
+  top: 7px;
+  left: 9px;
+  font:
+    12px 'SFMono-Regular',
+    Consolas,
+    monospace;
+  color: var(--muted);
+}
+.target-ring {
+  width: 34px;
+  height: 34px;
+  border: 6px solid var(--accent);
+  border-radius: 50%;
+}
+.search-symbol {
+  font:
+    38px 'SFMono-Regular',
+    Consolas,
+    monospace;
+}
+.rule-label {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--accent);
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  margin: 0 auto;
+  max-width: 330px;
+}
+.rule-label.location {
+  border-color: var(--accent);
+}
+.direction-field {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  width: 240px;
+  height: 210px;
+  margin: auto;
+}
+.field-center {
+  grid-row: 2;
+  grid-column: 2;
+  align-self: center;
+  color: var(--muted);
+}
+.direction-arrow {
+  font: 58px/1 sans-serif;
+  align-self: center;
+}
+.direction-options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 350px;
+  margin: 16px auto 0;
+}
+.direction-options button {
+  min-height: 58px;
+  background: var(--raised);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 25px;
+}
+.direction-options small {
+  display: block;
+  font-size: 12px;
+}
+.supplement-button {
+  width: 100%;
+  min-height: 48px;
+  color: var(--text);
+  background: var(--raised);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  margin-top: 12px;
+  padding: 12px;
+  font-size: 14px;
+}
+.supplement-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.budget-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 0 5px;
+}
+.budget-box strong {
+  font:
+    23px 'SFMono-Regular',
+    Consolas,
+    monospace;
+  margin-top: 12px;
+}
+.budget-box small {
+  font-size: 12px;
+  color: var(--muted);
+}
+.budget-explanation {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.8;
+  margin: 12px 0 0;
+}

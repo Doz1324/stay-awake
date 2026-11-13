@@ -1,0 +1,232 @@
+.session-page {
+  width: min(100%, 800px);
+  margin: 42px auto;
+}
+.session-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.session-top h1 {
+  font-size: 17px;
+  letter-spacing: 0;
+  margin: 0;
+  font-weight: 500;
+}
+.session-top p {
+  font-size: 12px;
+  color: var(--muted);
+}
+.session-clock {
+  font:
+    32px 'SFMono-Regular',
+    Consolas,
+    monospace;
+}
+.time-track {
+  height: 2px;
+  background: var(--line);
+  margin: 22px 0;
+}
+.time-track > div {
+  height: 100%;
+  background: var(--accent);
+}
+.task-area {
+  min-height: 390px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px 0;
+}
+.task {
+  width: min(100%, 540px);
+}
+.task h2 {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--muted);
+  margin: 0 0 30px;
+}
+.task-prompt {
+  font-size: clamp(36px, 7vw, 60px);
+  letter-spacing: 1px;
+  margin: 25px 0;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+.task-input {
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin: 8px 0;
+}
+.task-form {
+  width: min(100%, 360px);
+  margin: 0 auto;
+}
+.submit-button {
+  width: 100%;
+  padding: 14px;
+  min-height: 48px;
+  border: 1px solid var(--line);
+  background: var(--raised);
+  color: var(--text);
+  border-radius: 8px;
+  margin-top: 10px;
+}
+.submit-button:disabled {
+  opacity: 0.5;
+}
+.feedback {
+  height: 30px;
+  margin: 18px 0 0;
+  font-size: 15px;
+  color: var(--accent);
+}
+.feedback.wrong {
+  color: var(--danger);
+}
+.reaction-target {
+  background: var(--raised);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  color: var(--text);
+  width: min(100%, 350px);
+  height: 210px;
+  font-size: 24px;
+  font-weight: 500;
+}
+.reaction-target small {
+  display: block;
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 400;
+}
+.reaction-target.ready {
+  background: #b9ee88;
+  color: #172110;
+  border-color: #b9ee88;
+}
+.reaction-target.ready small {
+  color: #33492b;
+}
+.stroop-options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 30px;
+}
+.stroop-options button {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 8px;
+  min-height: 66px;
+}
+.stroop-options kbd {
+  display: block;
+  border: none;
+  margin-bottom: 5px;
+  font-size: 17px;
+}
+.stroop-word {
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+.color-red {
+  color: #ef7979;
+}
+.color-green {
+  color: #75cf90;
+}
+.color-blue {
+  color: #82adff;
+}
+.color-yellow {
+  color: #edd467;
+}
+[data-theme='light'] .color-red {
+  color: #b92536;
+}
+[data-theme='light'] .color-green {
+  color: #21783d;
+}
+[data-theme='light'] .color-blue {
+  color: #295ec7;
+}
+[data-theme='light'] .color-yellow {
+  color: #886a00;
+}
+.typing-prompt {
+  font:
+    27px/1.8 'SFMono-Regular',
+    Consolas,
+    monospace;
+  text-align: left;
+  overflow-wrap: anywhere;
+  margin: 20px 0;
+  white-space: pre-wrap;
+}
+.typing-prompt .correct {
+  color: var(--accent);
+}
+.typing-prompt .incorrect {
+  color: var(--danger);
+  text-decoration: underline;
+  background: #e464641a;
+}
+.typing-prompt .pending {
+  color: var(--muted);
+}
+.typing-prompt .cursor {
+  border-bottom: 2px solid var(--text);
+}
+.typing-input {
+  font:
+    17px/1.6 'SFMono-Regular',
+    Consolas,
+    monospace;
+  letter-spacing: 0;
+  text-align: left;
+}
+.session-bottom {
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.session-bottom p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.memory-string {
+  letter-spacing: 0.14em;
+  font-size: clamp(27px, 5.5vw, 48px);
+}
+@media (max-width: 600px) {
+  .session-page {
+    margin-top: 26px;
+  }
+  .task-area {
+    min-height: 320px;
+  }
+  .session-clock {
+    font-size: 28px;
+  }
+  .typing-prompt {
+    font-size: 22px;
+  }
+  .session-bottom {
+    align-items: flex-start;
+  }
+  .session-bottom p {
+    max-width: 170px;
+  }
+}

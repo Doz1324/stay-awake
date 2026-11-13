@@ -1,0 +1,122 @@
+:root {
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  background: #0b1020;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+button,
+input,
+select {
+  font: inherit;
+}
+button,
+select {
+  cursor: pointer;
+}
+button {
+  touch-action: manipulation;
+  min-height: 44px;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+button,
+input,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+button {
+  border: 0;
+}
+.app {
+  --bg: #0b1020;
+  --surface: #121b30;
+  --raised: #202c47;
+  --text: #f0f3ff;
+  --muted: #a7b4ce;
+  --line: #34425f;
+  --accent: #b4b8ff;
+  --accent-ink: #101630;
+  --glow: #6a64ee18;
+  --danger: #f5a99c;
+  min-height: 100svh;
+  background: radial-gradient(ellipse at 85% 0%, var(--glow), transparent 55%), var(--bg);
+  color: var(--text);
+  padding: 0 6%;
+  display: flex;
+  flex-direction: column;
+  color-scheme: dark;
+}
+.app[data-theme='light'] {
+  --bg: #f4f6ff;
+  --surface: #fff;
+  --raised: #e7ebfb;
+  --text: #152044;
+  --muted: #516084;
+  --line: #cbd3ec;
+  --accent: #5147c7;
+  --accent-ink: #fff;
+  --danger: #a52f21;
+  color-scheme: light;
+}
+.site-header {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  min-height: 84px;
+  border-bottom: 1px solid var(--line);
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 22px;
+  letter-spacing: -1px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+.brand svg,
+.brand-period {
+  color: var(--accent);
+}
+.header-caption {
+  color: var(--muted);
+  font-size: 13px;
+  border-left: 1px solid var(--line);
+  padding-left: 18px;
+  letter-spacing: 2px;
+}
+.header-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+.quiet-button {
+  background: transparent;
+  color: var(--muted);
+  padding: 10px 12px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 14px;
+  min-height: 44px;
+}
+.quiet-button:hover {
+  background: var(--raised);
+  color: var(--text);
+}
